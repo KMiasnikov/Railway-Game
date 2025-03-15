@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Railways Game Menu</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div id="game-menu">
+		<img src="pics/screens/menu_screen.png" alt="Railways Menu" id="menu-image">
+		<input type="text" id="player-name" placeholder="WHO ARE YOU?">
+		<button id="easy-btn" class="difficulty-btn">5x5</button>
+		<button id="hard-btn" class="difficulty-btn">7x7</button>
+		<button id="rules-btn">RULES</button>
+		<button id="start-game" disabled>START GAME</button>
+		<div id="rules-modal" class="modal">
+			<div class="modal-content">
+				<span class="close-btn">&times;</span>
+				<h2>Rules</h2>
+				<p>To win the game, connect all the rails correctly onto all possible tiles!</p>
+				<p><b>Left Mouse Click</b> to pick the straight rail or the corved rail.</p>
+				<p><b>Right Mouse Click</b> to rotate the picked rail.</p>
+			</div>
+		</div>
+	</div>
+	<div id="game-screen" style="display: none;">
+		<div id="game-info">
+			<h1>RAILWAYS</h1>
+			<p>Route Designer: <span id="player-display"></span></p>
+			<p>Elapsed Time: <span id="timer-display">00:00</span></p>
+			<button id="check-solution">Check Solution</button>
+			<button id="restart-game" style="display: none;">Restart Game</button>
+		</div>
+		<div id="game-board"></div>
+	</div>
+	<script src="script/utils.js"></script>
+	<script src="script/gameSetup.js"></script>
+	<script src="script/mapLogic.js"></script>
+</body>
+
+</html>
